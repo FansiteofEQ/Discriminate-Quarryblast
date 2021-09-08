@@ -1,12 +1,12 @@
 ================== Overal Info ==============================
-date of report: 2021-09-07 18:39:39.394897
+date of report: 2021-09-09 00:34:26.471458
 input_hdf5: mix_train_merge_modified.hdf5
 input_testset: test_trainer_outputs/test.npy
 input_model: test_trainer_outputs/final_model.h5
 output_name: test_tester_outputs
 ================== Testing Parameters =======================
 mode: generator
-finished the test in:  0 hours and 15 minutes and 7.92 seconds 
+finished the test in:  0 hours and 14 minutes and 55.21 seconds 
 loss_types: ['binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy']
 loss_weights: [0.05, 0.4, 0.55]
 batch_size: 10
@@ -22,9 +22,9 @@ P_threshold: 0.3
 S_threshold: 0.3
 number_of_plots: 3
 ================== Performance =========================
-Detection TP, FP, FN, TN: 9913, 47, 45, 9995
-Detection Precision, Recall, F1: 0.995281124497992, 0.9954810202851978, 0.9953810623556582
-P picking TP, FP, FN, TN: 8103, 18, 1855, 10024
-P picking Precision, Recall, F1: 0.9977835241965275, 0.8137176139787106, 0.8963991371204159
-S picking TP, FP, FN, TN: 8553, 45, 1405, 9997
-S picking Precision, Recall, F1: 0.9947662247034194, 0.8589074111267323, 0.9218581590860099
+Detection TP, FP, FN, TN: 10078, 109, 4, 9809
+Detection Precision, Recall, F1: 0.9893000883478944, 0.9996032533227535, 0.9944249839656618
+P picking TP, FP, FN, TN: 3994, 60, 6088, 9858
+P picking Precision, Recall, F1: 0.9851998026640355, 0.3961515572307082, 0.5650820599886813
+S picking TP, FP, FN, TN: 9215, 87, 867, 9831
+S picking Precision, Recall, F1: 0.9906471726510427, 0.9140051577068042, 0.9507841518778374

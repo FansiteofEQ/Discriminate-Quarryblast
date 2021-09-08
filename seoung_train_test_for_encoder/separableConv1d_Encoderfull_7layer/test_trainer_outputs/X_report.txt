@@ -1,5 +1,5 @@
 ================== Overal Info ==============================
-date of report: 2021-09-07 18:15:17.227907
+date of report: 2021-09-09 00:16:47.806433
 input_hdf5: mix_train_merge_modified.hdf5
 input_csv: mix_train_merge_modified.csv
 output_name: test_trainer_outputs
@@ -10,8 +10,8 @@ lstm_blocks: 2
 padding_type: same
 activation_type: relu
 drop_rate: 0.2
-total params: 76,080
-trainable params: 75,376
+total params: 174,480
+trainable params: 173,776
 non-trainable params: 704
 ================== Training Parameters ======================
 mode of training: generator
@@ -30,15 +30,15 @@ gpuid: None
 gpu_limit: None
 use_multiprocessing: True
 ================== Training Performance =====================
-finished the training in:  7 hours and 58 minutes and 21.3 seconds 
+finished the training in:  11 hours and 6 minutes and 42.06 seconds 
 stoped after epoche: 10
-last loss: 0.00675271221346
-last detector_loss: 0.0251215
-last picker_P_loss: 0.0056503
-last picker_S_loss: 0.00567552
-last detector_f1: 0.91865
-last picker_P_f1: 0.274807
-last picker_S_f1: 0.191674
+last loss: 0.0057926279985
+last detector_loss: 0.0234301
+last picker_P_loss: 0.00446108
+last picker_S_loss: 0.00482851
+last detector_f1: 0.929345
+last picker_P_f1: 0.489938
+last picker_S_f1: 0.349499
 ================== Other Parameters =========================
 label_type: gaussian
 augmentation: True
