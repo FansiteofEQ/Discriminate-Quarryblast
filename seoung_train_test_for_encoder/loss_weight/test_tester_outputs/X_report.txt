@@ -1,0 +1,30 @@
+================== Overal Info ==============================
+date of report: 2021-09-15 11:19:58.108662
+input_hdf5: mix_train_merge_modified.hdf5
+input_testset: test_trainer_outputs/test.npy
+input_model: test_trainer_outputs/final_model.h5
+output_name: test_tester_outputs
+================== Testing Parameters =======================
+mode: generator
+finished the test in:  0 hours and 15 minutes and 5.7 seconds 
+loss_types: ['binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy']
+loss_weights: [0.05, 0.4, 0.55]
+batch_size: 10
+total number of tests 20000
+gpuid: None
+gpu_limit: None
+================== Other Parameters =========================
+normalization_mode: std
+estimate uncertainty: True
+number of Monte Carlo sampling: 2
+detection_threshold: 0.5
+P_threshold: 0.3
+S_threshold: 0.3
+number_of_plots: 3
+================== Performance =========================
+Detection TP, FP, FN, TN: 9990, 45, 13, 9952
+Detection Precision, Recall, F1: 0.9955156950672646, 0.9987003898830351, 0.9971054995508534
+P picking TP, FP, FN, TN: 4581, 29, 5422, 9968
+P picking Precision, Recall, F1: 0.9937093275488069, 0.457962611216635, 0.6269759802915212
+S picking TP, FP, FN, TN: 9157, 36, 846, 9961
+S picking Precision, Recall, F1: 0.9960839769389753, 0.9154253723882835, 0.9540529276932694
