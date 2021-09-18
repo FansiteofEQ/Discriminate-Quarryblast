@@ -1,0 +1,50 @@
+  loss_weights=[0.05, 0.70, 0.25],
+
+def user_encoder(filter_number, filter_size, depth, drop_rate, ker_regul, bias_regul, activation, padding, inpC):
+    ' Returns the encoder that is a combination of residual blocks and maxpooling.'        
+    e = inpC
+    e2 = inpC
+    
+    for dp in range(depth):
+        
+        e = keras.layers.SeparableConv1D(filter_number[dp], 
+                   filter_size[dp], 
+                   padding = padding, 
+                   activation = activation,
+                   kernel_regularizer = ker_regul,
+                   bias_regularizer = bias_regul,
+                   )(e)
+        
+        if(dp%3==0 and dp>0):
+            e2 = Conv1D(filter_number[dp], 
+                   filter_size[dp], 
+                   padding = padding, 
+                   activation = activation,
+                   kernel_regularizer = ker_regul,
+                   bias_regularizer = bias_regul,
+                   )(e2)
+            e = add([e, e2])
+            
+        
+        e = MaxPooling1D(2, padding = padding)(e)
+        e2 = MaxPooling1D(2, padding = padding)(e2)
+        
+    return(e) 
+
+
+def user_decoder(filter_number, filter_size, depth, drop_rate, ker_regul, bias_regul, activation, padding, inpC):
+    ' Returns the dencoder that is a combination of residual blocks and upsampling. '           
+    d = inpC
+    
+    for dp in range(depth):        
+        d = UpSampling1D(2)(d) 
+        if dp == 3:
+            d = Cropping1D(cropping=(1, 1))(d)
+        d = keras.layers.SeparableConv1D(filter_number[dp], 
+                   filter_size[dp], 
+                   padding = padding, 
+                   activation = activation,
+                   kernel_regularizer = ker_regul,
+                   bias_regularizer = bias_regul,
+                   )(d)
+    return(d)  
