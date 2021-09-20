@@ -1,0 +1,21 @@
+def _block_CNN_1(filters, ker, drop_rate, activation, padding, inpC): 
+    ' Returns bottleneck resnet CNN blocks '
+
+
+    prev = inpC
+    layer_1 = BatchNormalization()(prev)
+    act_1 = Activation(activation)(layer_1)
+    conv_1 = Conv1D(filters // 4, 1, padding=padding)(act_1)
+
+    layer_2 = BatchNormalization()(conv_1)
+    act_2 = Activation(activation)(layer_2) 
+    act_2 = SpatialDropout1D(drop_rate)(act_2, training=True)
+    conv_2 = Conv1D(filters // 4, ker, padding=padding)(act_2)
+
+    layer_3 = BatchNormalization()(conv_2)
+    act_3 = Activation(activation)(layer_3)
+    conv_3 = Conv1D(filters, 1, padding=padding)(act_3)
+
+    res_out = add([prev, conv_3])
+    
+    return res_out 

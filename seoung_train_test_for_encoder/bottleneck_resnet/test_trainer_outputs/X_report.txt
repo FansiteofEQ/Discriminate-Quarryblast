@@ -1,0 +1,52 @@
+================== Overal Info ==============================
+date of report: 2021-09-14 05:34:55.519760
+input_hdf5: ../stead/merge_modified.hdf5
+input_csv: ../stead/mini_merged.csv
+output_name: test_trainer_outputs
+================== Model Parameters =========================
+input_dimention: (6000, 3)
+cnn_blocks: 5
+lstm_blocks: 2
+padding_type: same
+activation_type: relu
+drop_rate: 0.1
+total params: 135,312
+trainable params: 134,288
+non-trainable params: 1,024
+================== Training Parameters ======================
+mode of training: generator
+loss_types: ['binary_crossentropy', 'binary_crossentropy', 'binary_crossentropy']
+loss_weights: [0.05, 0.4, 0.55]
+batch_size: 20
+epochs: 10
+train_valid_test_split: [0.85, 0.05, 0.1]
+total number of training: 85000
+total number of validation: 5000
+monitor: val_loss
+patience: 2
+multi_gpu: False
+number_of_gpus: 4
+gpuid: None
+gpu_limit: None
+use_multiprocessing: True
+================== Training Performance =====================
+finished the training in:  6 hours and 33 minutes and 38.49 seconds 
+stoped after epoche: 5
+last loss: 0.00658491978778
+last detector_loss: 0.0220316
+last picker_P_loss: 0.00554067
+last picker_S_loss: 0.0056492
+last detector_f1: 0.955323
+last picker_P_f1: 0.571613
+last picker_S_f1: 0.516407
+================== Other Parameters =========================
+label_type: gaussian
+augmentation: True
+shuffle: True
+normalization_mode: std
+add_event_r: 0.6
+add_noise_r: 0.3
+shift_event_r: 0.99
+drop_channel_r: 0.5
+scale_amplitude_r: None
+pre_emphasis: False
