@@ -1,4 +1,4 @@
-def user_encoder(filter_number, filter_size, depth, drop_rate, ker_regul, bias_regul, activation, padding, inpC):
+loss_weights=[0.05, 0.65, 0.30]    def user_encoder(filter_number, filter_size, depth, drop_rate, ker_regul, bias_regul, activation, padding, inpC):
     ' Returns the encoder that is a combination of residual blocks and maxpooling.'        
     e = inpC
     e2 = inpC
