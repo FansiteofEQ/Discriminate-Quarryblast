@@ -1,3 +1,4 @@
+다시 돌려야함
 def user_encoder(filter_number, filter_size, depth, drop_rate, ker_regul, bias_regul, activation, padding, inpC):
     ' Returns the encoder that is a combination of residual blocks and maxpooling.'        
     e = inpC
